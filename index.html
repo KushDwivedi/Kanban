@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light-mode">
+    <header>
+        <h1>Kanban Board</h1>
+        <button id="add-task-button">Add Task</button>
+        <button id="toggle-mode-button"> Mode</button>
+    </header>
+    <main>
+        <section class="kanban-column" id="todo-column">
+            <h2>To Do</h2>
+        </section>
+        <section class="kanban-column" id="doing-column">
+            <h2>Doing</h2>
+        </section>
+        <section class="kanban-column" id="done-column">
+            <h2>Done</h2>
+        </section>
+    </main>
+    <div id="add-task-modal" class="modal">
+        <div class="modal-content">
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <label for="task-title">Task Title:</label>
+                <input type="text" id="task-title" name="task-title" required>
+
+                <label for="task-description">Task Description:</label>
+                <textarea id="task-description" name="task-description" required></textarea>
+
+                <button type="submit">Create Task</button>
+            </form>
+            <button id="close-modal-button">Close</button>
+        </div>
+    </div>
+    <div id="edit-task-modal" class="modal">
+        <div class="modal-content">
+            <h2>Edit Task</h2>
+            <form id="edit-task-form">
+                <label for="edit-task-title">Task Title:</label>
+                <input type="text" id="edit-task-title" name="edit-task-title" required>
+    
+                <label for="edit-task-description">Task Description:</label>
+                <textarea id="edit-task-description" name="edit-task-description" required></textarea>
+    
+                <button type="submit">Update Task</button>
+            </form>
+            <button id="edit-modal-close-button">Close</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
